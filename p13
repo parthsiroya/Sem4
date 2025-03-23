@@ -1,0 +1,30 @@
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        // Example String
+        String str = "Hello, welcome to the world of Java programming!";
+
+        // 1. Using charAt() to get a character at a specific index
+        char ch = str.charAt(7);  // Character at index 7
+        System.out.println("Character at index 7: " + ch);
+
+        // 2. Using contains() to check if a substring exists in the string
+        boolean containsWelcome = str.contains("welcome");
+        System.out.println("Does the string contain 'welcome'? " + containsWelcome);
+
+        // 3. Using format() to format the string (using placeholders)
+        int age = 25;
+        String formattedString = String.format("Hello, I am %d years old.", age);
+        System.out.println("Formatted String: " + formattedString);
+
+        // 4. Using length() to find the length of the string
+        int length = str.length();
+        System.out.println("Length of the string: " + length);
+
+        // 5. Using split() to split the string into an array of words
+        String[] words = str.split(" ");
+        System.out.println("Words in the string:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
