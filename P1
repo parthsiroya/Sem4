@@ -12,7 +12,7 @@ class Student {
 }
 public class Demo {
    public static void main(String[] args) {
-      Student s = new Student(173, "Susan");
+      Student s = new Student(59, "Parth");
       s.display();
    }
 }
