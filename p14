@@ -1,0 +1,46 @@
+// Parent class (Superclass)
+class Animal {
+    // Field of the parent class
+    String name;
+
+    // Constructor of the parent class
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    // Method of the parent class
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+
+    public void sleep() {
+        System.out.println(name + " is sleeping.");
+    }
+}
+
+// Child class (Subclass) that inherits from Animal class
+class Dog extends Animal {
+
+    // Constructor of the child class
+    public Dog(String name) {
+        super(name); // Call to the parent class constructor
+    }
+
+    // Method of the child class (specific to Dog)
+    public void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+// Main class to test inheritance
+public class SingleInheritanceDemo {
+    public static void main(String[] args) {
+        // Create an object of Dog class (child class)
+        Dog myDog = new Dog("Buddy");
+
+        // Access methods from both parent and child class
+        myDog.eat();   // Inherited from Animal class
+        myDog.sleep();  // Inherited from Animal class
+        myDog.bark();   // Defined in Dog class
+    }
+}
