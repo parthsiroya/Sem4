@@ -1,14 +1,13 @@
-// Parent class (Superclass)
 class Animal {
-    // Field of the parent class
+   
     String name;
 
-    // Constructor of the parent class
+    
     public Animal(String name) {
         this.name = name;
     }
 
-    // Method of the parent class
+    
     public void eat() {
         System.out.println(name + " is eating.");
     }
@@ -18,44 +17,44 @@ class Animal {
     }
 }
 
-// Child class (Subclass) inheriting from Animal
+
 class Dog extends Animal {
 
-    // Constructor of the child class
+   
     public Dog(String name) {
-        super(name); // Call to the parent class constructor
+        super(name); 
     }
 
-    // Method of the child class
+   
     public void bark() {
         System.out.println(name + " is barking.");
     }
 }
 
-// Grandchild class inheriting from Dog, which inherits from Animal
+
 class Puppy extends Dog {
 
-    // Constructor of the grandchild class
+    
     public Puppy(String name) {
-        super(name); // Call to the parent (Dog) class constructor
+        super(name); 
     }
 
-    // Method of the grandchild class
+    
     public void play() {
         System.out.println(name + " is playing.");
     }
 }
 
-// Main class to test multilevel inheritance
+
 public class MultilevelInheritanceDemo {
     public static void main(String[] args) {
-        // Create an object of Puppy class (grandchild class)
+        
         Puppy myPuppy = new Puppy("Charlie");
 
-        // Access methods from the parent, child, and grandchild class
-        myPuppy.eat();    // Inherited from Animal class
-        myPuppy.sleep();   // Inherited from Animal class
-        myPuppy.bark();    // Inherited from Dog class
-        myPuppy.play();    // Defined in Puppy class
+        
+        myPuppy.eat();    
+        myPuppy.sleep();   
+        myPuppy.bark();    
+        myPuppy.play();   
     }
 }
