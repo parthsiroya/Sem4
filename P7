@@ -1,18 +1,30 @@
-class Student {
-   private int rno;
-   private String name;
-   public Student(int r, String n) {
-      rno = r;
-      name = n;
-   }
-   public void display() {
-      System.out.println("Roll Number: " + rno);
-      System.out.println("Name: " + name);
-   }
-}
-public class Demo {
-   public static void main(String[] args) {
-      Student s = new Student(59, "Parth");
-      s.display();
-   }
+public class Rectangle {
+    
+    private double height;
+    private double weight;
+    
+    public Rectangle(double height, double weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+ 
+    public double getArea() {
+   
+        return height * weight;
+    }
+
+   
+    public void displayDetails() {
+        System.out.println("Height: " + height);
+        System.out.println("Weight: " + weight);
+        System.out.println("Area: " + getArea());
+    }
+
+    public static void main(String[] args) {
+       
+        Rectangle rect = new Rectangle(5.0, 7.0);
+
+        
+        rect.displayDetails();
+    }
 }
